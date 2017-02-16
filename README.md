@@ -10,3 +10,9 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## Mettre à jour le site
+
+Se placer sur la branche à synchroniser avec la prod (qui équivaut à la branche master)
+Lancer la tâche grunt "build" afin de regénérer les fichiers minifiés du répertoire dist
+Lancer la tâche grunt "buildcontrol/pages", cela push le répertoire dist sur master
