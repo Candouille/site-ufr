@@ -1,83 +1,178 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-body {
-  padding: 0;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
+/*Titre de chaque élément de la page*/
+.ufr-home > div > h2{
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+/*Style du header*/
+.ufr-header{
+  background-image:linear-gradient(black, white);
+  text-align: center;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.logo-accueil{
+  height: 300px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+img.logo-accueil:hover{
+  cursor: pointer;
+}
+
+.ufr-header .social{
+  float: right;
+}
+
+/*Contenu principal de la page*/
+.main-page-content{
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.page-element{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.navbar-ufr{
+  border: solid black 1px;
+  border-radius: 7px;
+  background-image:linear-gradient(rgb(70,70,70), rgb(10,10,10));
+}
+
+.navbar-ufr-list{
+  margin-bottom: 0px;
+
+  /*Suppression du padding-left de 40 px dont l'origine reste mistérieuse...*/
+  padding-left: 0px;
+}
+
+.navbar-ufr-list li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-ufr-list li:hover{
+  border-radius: 7px;
+  background-image:linear-gradient(rgb(140,140,140), rgb(70,70,70));
+}
+
+/*Carousel*/
+.ufr-carousel{
+  margin: auto;
+  width: 1000px;
+  height: 562px;
+}
+/*On impose une taille fixe aux images*/
+/*On tachera d'en fournir avec un ratio 16:9 de dimension 1000*562px*/
+.ufr-carousel img{
+  width: 1000px;
+  height: 562px;
+}
+
+.ufr-carousel p, .ufr-carousel h3{
+  background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
+}
+
+.container-info{
+  /*on annule le padding instauré par le container-fluid :/ */
+  padding-left: 0px;
+  padding-right: 0px;/*REGLER cette histoire d'allignement*/
+
+  border-top: solid black 5px;
+  border-left: solid black 5px;
+}
+
+/*Style pour un block*/
+.ufr-block{
+  color: white;
+  font-weight: bold;
+  border-right: solid black 5px;
+  border-bottom: solid black 5px;
+  /*text-shadow: 2px 2px white;*/
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+}
+
+.ufr-block:hover{
+  cursor: pointer;
+}
+
+
+.ufr-block h2, .ufr-block p{
+  background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
+}
+
+/*Style de conteneur de blocks jeu*/
+.container-jeux{
+  margin: -10px -10px -10px -10px;
+
+  /*On annule le padding provoqué par la classe container-fluid*/
+  padding-left: 0px;
+  padding-right: 0px;
+
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.block-jeu{
+  padding: 10px 10px 10px 10px;
+}
+
+.block-jeu h3, .block-jeu h4{
+  background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
+}
+
+.sous-block-jeu:hover{
+  cursor: pointer;
+}
+
+.sous-block-jeu{
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+
+  height: 300px;
+  line-height: 300px;
+}
+
+.sous-block-jeu > h3{
+  /*line-height:150px;*/
+  /*vertical-align: bottom;*/
+}
+
+.sous-block-jeu > h4{
+  /*line-height:150px;*/
+  /*vertical-align: top;*/
+}
+
+.text-sous-block-jeu{
+  width:80%; /* largeur du bloc */
+  vertical-align:middle;
+  display:inline-block;
+  line-height:1.2; /* on rétablit le line-height */
+  text-align:center; /* ... et l'alignement du texte */
+}
+
+/*Style de la zone dédiée au recrutement*/
+.recrutement{
+  text-align: center;
+}
+
+.container-recrutement{
+  text-align: center;
+}
+
+.ufr-footer{
+  text-align: center;
+  background-image:linear-gradient(white, black);
 }
