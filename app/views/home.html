@@ -1,0 +1,78 @@
+<div class="ufr-home">
+
+  <div class="main-page-content">
+
+    <!--Barre de navigation-->
+    <nav class="navbar-ufr container-fluid page-element">
+      <ul class="navbar-ufr-list row">
+        <a href="#actu"><li class="col-lg-4">Actualités</li></a>
+        <a href="#branches"><li class="col-lg-4">Branches</li></a>
+        <a href="#recrutement"><li class="col-lg-4">Recrutement</li></a>
+      </ul>
+    </nav>
+
+    <!--Carousel-->
+    <!--<div uib-carousel-->
+         <!--active="active"-->
+         <!--interval="myInterval"-->
+         <!--no-wrap="noWrapSlides"-->
+         <!--class="ufr-carousel">-->
+      <!--<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">-->
+        <!--<img ng-src="{{slide.image}}">-->
+        <!--<div class="carousel-caption">-->
+          <!--<h3>{{slide.titre}}</h3>-->
+          <!--<p>{{slide.texte}}</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--Les blocks dédiés aux actualités-->
+    <h2 id="actu">Actualités</h2>
+
+    <div class="container-fluid container-info page-element">
+      <div id="blocks-info">
+        <ufr-block data-ng-repeat="block in ufrBlocks"
+                   jeu="block.jeu"
+                   titre="block.titre"
+                   img="block.img">
+        </ufr-block>
+      </div>
+    </div>
+
+
+    <!--Les blocks dédiés à nos jeux-->
+    <h2 id="branches">Nos branches</h2>
+
+    <div class="container-fluid container-jeux page-element">
+      <block-jeu data-ng-repeat="block in blocksJeu"
+                 titre="block.titre"
+                 sous-titre="block.sousTitre"
+                 img="block.img"
+                 branche="block.branche">
+      </block-jeu>
+    </div>
+
+    <!--Le Recrutement-->
+    <h2 id="recrutement">Nous rejoindre</h2>
+    <p class="recrutement">(Recrutement)</p>
+
+    <div class="container-recrutement panel panel-default page-element">
+      <div class="panel-body">
+        <ol>
+          <li>Créez vous un compte sur notre forum via
+            <a href="http://forum.communaute-ufr.fr/register" target="_blank">
+              ce lien</a>.
+          </li>
+          <li>Référez vous à
+            <a href="http://forum.communaute-ufr.fr/t307-procedure-de-recrutement" target="_blank">
+              ces instructions</a>.
+          </li>
+          <li>Puis poster votre candidature
+            <a href="http://forum.communaute-ufr.fr/f4-inscriptions">ici</a>.
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</div>
