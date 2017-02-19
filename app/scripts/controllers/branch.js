@@ -8,10 +8,6 @@
  * Controller of the communauteUfrAppApp
  */
 angular.module('communauteUfrAppApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('BranchController', function ($scope, $state, $stateParams) {
+    
   });

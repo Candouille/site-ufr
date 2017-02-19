@@ -15,21 +15,22 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  .config(function ($urlRouterProvider, $stateProvider) {
+
+    $urlRouterProvider.otherwise('/accueil');
+
+    $stateProvider.state('home', {
+      url: '/accueil',
+      templateUrl: 'views/home.html',
+      controller: 'HomeController'
+    });
+  })/*.state('branche', {
+    url: '/ufrPack/branche',
+    params:{
+      nomBranche: 'toto'
+    },
+    templateUrl: 'views/page-branche.html'
+  })*/;
