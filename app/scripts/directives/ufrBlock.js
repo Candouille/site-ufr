@@ -9,7 +9,7 @@ angular.module('communauteUfrAppApp').directive('ufrBlock', function(){
       img:'='
     },
     controller: function ($scope){
-      $scope.imageFond = { 'background-image': 'url(/images/news/' + $scope.img + ')' };
+      $scope.imageFond = { 'background-image': 'url(images/news/' + $scope.img + ')' };
     },
     templateUrl: 'views/directives/ufr-block.html'
   };

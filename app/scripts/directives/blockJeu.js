@@ -16,7 +16,7 @@ angular.module('communauteUfrAppApp').directive('blockJeu', function($state){
       branche:"="
     },
     controller: function ($scope){
-      $scope.imageFond = { 'background-image': 'url(/images/branches/' + $scope.img + ')' };
+      $scope.imageFond = { 'background-image': 'url(images/branches/' + $scope.img + ')' };
 
       $scope.changeState = function () {
         $state.go('branche', {nomBranche: $scope.branche});
