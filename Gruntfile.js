@@ -232,6 +232,10 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
+          // J'ai du annuler ici le renommage des images car je ne pouvais autrement pas connaitre leur nom final
+          // et le permettant de les afficher sur la home n'aurait pas fonctionné.
+          // Si jamais il y a moyen de réactiver cette option tout en ayant la possibilité de connaitre à l'avance
+          // le nom final de chacune, je suis preneur ^^'
           // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]

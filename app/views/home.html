@@ -12,19 +12,19 @@
     </nav>
 
     <!--Carousel-->
-    <!--<div uib-carousel-->
-         <!--active="active"-->
-         <!--interval="myInterval"-->
-         <!--no-wrap="noWrapSlides"-->
-         <!--class="ufr-carousel">-->
-      <!--<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">-->
-        <!--<img ng-src="{{slide.image}}">-->
-        <!--<div class="carousel-caption">-->
-          <!--<h3>{{slide.titre}}</h3>-->
-          <!--<p>{{slide.texte}}</p>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+    <div uib-carousel
+         active="active"
+         interval="myInterval"
+         no-wrap="noWrapSlides"
+         class="ufr-carousel">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}">
+        <div class="carousel-caption">
+          <h3>{{slide.titre}}</h3>
+          <p>{{slide.texte}}</p>
+        </div>
+      </div>
+    </div>
 
     <!--Les blocks dédiés aux actualités-->
     <h2 id="actu">Actualités</h2>
