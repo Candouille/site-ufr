@@ -39,5 +39,5 @@ angular.module('communauteUfrAppApp').directive('branche', function($stateParams
 
     },
     templateUrl: 'views/directives/branch.html'
-  }
+  };
 });

@@ -431,8 +431,7 @@ module.exports = function (grunt) {
       pages: {
         options: {
           remote: 'git@github.com:Candouille/site-ufr.git',
-          branch: 'master',
-          base: 'bob'
+          branch: 'master'
         }
       },
       local: {

@@ -12,5 +12,5 @@ angular.module('communauteUfrAppApp').directive('ufrBlock', function(){
       $scope.imageFond = { 'background-image': 'url(/images/news/' + $scope.img + ')' };
     },
     templateUrl: 'views/directives/ufr-block.html'
-  }
+  };
 });

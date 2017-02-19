@@ -11,5 +11,5 @@ angular.module('communauteUfrAppApp').directive('branchInfo', function(){
 
     },
     templateUrl: 'views/directives/branch-info.html'
-  }
+  };
 });

@@ -23,5 +23,5 @@ angular.module('communauteUfrAppApp').directive('blockJeu', function($state){
       };
     },
     templateUrl: 'views/directives/block-jeu.html'
-  }
+  };
 });
