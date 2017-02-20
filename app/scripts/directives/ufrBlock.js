@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrAppApp').directive('ufrBlock', function(){
+angular.module('communauteUfrApp').directive('ufrBlock', function(){
   return {
     restrict: 'E',
     scope:{

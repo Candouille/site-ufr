@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrAppApp').directive('blockJeu', function($state){
+angular.module('communauteUfrApp').directive('blockJeu', function($state){
   return {
     /*restrict: Indique sous quelle forme la directive doit être utilisée dans un template html
      'E' => sous forme d'élément: <ma-directive title="Paramètres">...</ma-directive>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrAppApp').directive('branche', function($stateParams){
+angular.module('communauteUfrApp').directive('branche', function($stateParams){
   return {
     restrict: 'E',
     scope:{

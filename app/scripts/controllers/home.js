@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrAppApp')
+angular.module('communauteUfrApp')
   .controller('HomeController', function ($scope, $stateParams, $rootScope, $state) {
 
     // Carousel

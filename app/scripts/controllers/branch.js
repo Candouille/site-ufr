@@ -1,13 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name communauteUfrAppApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the communauteUfrAppApp
- */
-angular.module('communauteUfrAppApp')
+angular.module('communauteUfrApp')
   .controller('BranchController', function ($scope, $state, $stateParams) {
     
   });

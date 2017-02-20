@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrAppApp').directive('branchInfo', function(){
+angular.module('communauteUfrApp').directive('branchInfo', function(){
   return {
     restrict: 'E',
     scope:{

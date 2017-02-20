@@ -1,15 +1,7 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name communauteUfrAppApp
- * @description
- * # communauteUfrAppApp
- *
- * Main module of the application.
- */
 angular
-  .module('communauteUfrAppApp', [
+  .module('communauteUfrApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
