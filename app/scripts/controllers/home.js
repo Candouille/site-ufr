@@ -11,15 +11,15 @@ angular.module('communauteUfrApp')
     var slides = $scope.slides = [];
 
     slides.push({
-      image: '//image.noelshack.com/fichiers/2016/47/1480287464-gtav.png',
-      titre: 'L\'UFR est sur GTA !',
-      texte: 'Le respect peut aller se faire foutre. La décence aussi...',
+      image: 'images/carousel/overwatch.png',
+      titre: 'On lvl up sur Overwatch !',
+      texte: 'Si le matchmaking le veut bien...',
       id: 0
     });
     slides.push({
-      image: '//image.noelshack.com/fichiers/2016/47/1480286066-prowler.png',
-      titre: 'Le Prowler, la relève du Galaxie',
-      texte: 'Get in the gal ! Get in the fucking ga... My mistake. Get in the Prowler !',
+      image: 'images/carousel/sc3-0-soon.png',
+      titre: 'La 3.0 arrive bientôt !',
+      texte: 'Et peut-être même qu\'un jour, Star Citizen sera terminé pour de vrai !',
       id: 1
     });
     slides.push({

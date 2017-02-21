@@ -1,3 +1,22 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+/*h1 {*/
+  /*font-size: ;*/
+/*}*/
+
+/*h2 {*/
+  /*font-size: ;*/
+/*}*/
+
+/*h3 {*/
+  /*font-size: ;*/
+/*}*/
+
+/*h4 {*/
+  /*font-size: ;*/
+/*}*/
+
 /*Titre de chaque élément de la page*/
 .ufr-home > div > h2{
   text-align: center;
