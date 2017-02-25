@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrApp').directive('ufrBlock', function(){
+angular.module('communauteUfrApp').directive('blockNews', function(){
   return {
     restrict: 'E',
     scope:{
@@ -11,6 +11,6 @@ angular.module('communauteUfrApp').directive('ufrBlock', function(){
     controller: function ($scope){
       $scope.imageFond = { 'background-image': 'url(images/news/' + $scope.img + ')' };
     },
-    templateUrl: 'views/directives/ufr-block.html'
+    templateUrl: 'views/directives/block-news.html'
   };
 });

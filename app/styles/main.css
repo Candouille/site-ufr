@@ -108,7 +108,7 @@ img.logo-accueil:hover{
 }
 
 /*Style pour un block*/
-.ufr-block{
+.block-news{
   color: white;
   font-weight: bold;
   border-right: solid black 5px;
@@ -120,12 +120,12 @@ img.logo-accueil:hover{
   background-size:cover;
 }
 
-.ufr-block:hover{
+.block-news:hover{
   cursor: pointer;
 }
 
 
-.ufr-block h2, .ufr-block p{
+.block-news h2, .block-news p{
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
 }
 
