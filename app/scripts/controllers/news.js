@@ -14,7 +14,7 @@ angular.module('communauteUfrApp')
     $scope.title = $stateParams.newsTitle;
     $scope.newsFile = $stateParams.file;
 
-    $http.get('views/resources/news/' + $stateParams.file)
+    $http.get('texts/news/' + $stateParams.file)
       .then(function success(response){
         $scope.news = response.data;
     }, function error(){
