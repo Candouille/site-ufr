@@ -15,10 +15,20 @@ angular
 
     $urlRouterProvider.otherwise('/accueil');
 
-    $stateProvider.state('home', {
+    $stateProvider
+    .state('home', {
       url: '/accueil',
       templateUrl: 'views/home.html',
       controller: 'HomeController'
+    })
+
+    .state('news', {
+      url: '/news/{newsTitle}',
+      params: {
+        file: null
+      },
+      templateUrl: 'views/news-page.html',
+      controller: 'NewsController'
     });
   })/*.state('branche', {
     url: '/ufrPack/branche',

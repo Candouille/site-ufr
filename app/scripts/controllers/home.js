@@ -43,49 +43,47 @@ angular.module('communauteUfrApp')
     }
 
 
-    $scope.ufrBlocks = [{
+    $scope.newsBlocks = [{
       jeu:'Planetside 2',
       titre:'Update des constructions',
-      img: 'ps2.jpg'
-    },
-      {
-        jeu:'World of Warships',
-        titre:'Tournoi OMNI',
-        img: 'wows.jpg'
-      },
-      {
-        jeu:'Grand Theft Auto V',
-        titre:'Motos, boulots, bobos',
-        img: 'gtav.jpeg'
-      },
-      {
-        jeu:'Star Citizen',
-        titre:'CitizenCon 2016',
-        img: 'sc.jpg'
-      }];
+      img: 'ps2.jpg',
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+    },{
+      jeu:'World of Warships',
+      titre:'Tournoi OMNI',
+      img: 'wows.jpg',
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+    },{
+      jeu:'Grand Theft Auto V',
+      titre:'Motos, boulots, bobos',
+      img: 'gtav.jpeg',
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+    },{
+      jeu:'Star Citizen',
+      titre:'CitizenCon 2016',
+      img: 'sc.jpg',
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+    }];
 
     $scope.blocksJeu = [{
       titre: 'PlanetSide 2',
       sousTitre: 'branche inactive',
       img: 'ps2.jpg',
       branche: 'ps2'
-    },
-      {
-        titre: 'World of Warships',
-        sousTitre: 'Recrutement sélectif',
-        img: 'wows.jpg',
-        branche: 'wows'
-      },
-      {
-        titre: 'Grand Theft Auto V',
-        sousTitre: 'Ouvert au recrutement',
-        img: 'gtav.jpeg',
-        branche: 'gtav'
-      },
-      {
-        titre: 'Star Citizen',
-        sousTitre: 'En attente de la V1 du jeu',
-        img: 'sc.jpg',
-        branche: 'sc'
-      }];
+    },{
+      titre: 'World of Warships',
+      sousTitre: 'Recrutement sélectif',
+      img: 'wows.jpg',
+      branche: 'wows'
+    },{
+      titre: 'Grand Theft Auto V',
+      sousTitre: 'Ouvert au recrutement',
+      img: 'gtav.jpeg',
+      branche: 'gtav'
+    },{
+      titre: 'Star Citizen',
+      sousTitre: 'En attente de la V1 du jeu',
+      img: 'sc.jpg',
+      branche: 'sc'
+    }];
   });

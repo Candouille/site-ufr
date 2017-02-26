@@ -1,0 +1,23 @@
+<div ng-controller="NewsController">
+
+  <h1>{{news.title}}</h1>
+
+  <h2>{{news.subtitle}}</h2>
+
+  <p>{{news.author}}</p>
+  <p>{{news.date}}</p>
+
+  <div class="img-main">
+    <img ng-src="{{news.mainImage}}">
+  </div>
+
+  <div data-ng-repeat="element in news.content"
+       class="news-content"
+       ng-class="$index%2 === 0 ? 'content-even' : 'content-odd'">
+
+      <p>{{element.text}}</p>
+      <img ng-src="{{element.image}}">
+
+  </div>
+
+</div>

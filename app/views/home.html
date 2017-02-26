@@ -5,9 +5,15 @@
     <!--Barre de navigation-->
     <nav class="navbar-ufr container-fluid page-element">
       <ul class="navbar-ufr-list row">
-        <a href="#actu"><li class="col-lg-4">Actualités</li></a>
-        <a href="#branches"><li class="col-lg-4">Branches</li></a>
-        <a href="#recrutement"><li class="col-lg-4">Recrutement</li></a>
+        <a href="#actu">
+          <li class="col-lg-4">Actualités</li>
+        </a>
+        <a href="#branches">
+          <li class="col-lg-4">Branches</li>
+        </a>
+        <a href="#recrutement">
+          <li class="col-lg-4">Recrutement</li>
+        </a>
       </ul>
     </nav>
 
@@ -32,10 +38,11 @@
 
     <div class="container-fluid container-info page-element">
       <div id="blocks-info">
-        <block-news data-ng-repeat="block in ufrBlocks"
-                   jeu="block.jeu"
-                   titre="block.titre"
-                   img="block.img">
+        <block-news data-ng-repeat="block in newsBlocks"
+                    jeu="block.jeu"
+                    titre="block.titre"
+                    img="block.img"
+                    file="block.file">
         </block-news>
       </div>
     </div>
