@@ -23,7 +23,6 @@
 .news-content p{
   max-width: 57%;
 
-  border: solid black 2px;
   border-radius: 5px;
   padding: 2px;
   background-image:linear-gradient(rgb(240,240,240), rgb(100,100,100));

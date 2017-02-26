@@ -13,7 +13,9 @@ angular
   ])
   .config(function ($urlRouterProvider, $stateProvider) {
 
-    $urlRouterProvider.otherwise('/accueil');
+    //Neutralisé pour le moment car ajouter un état par défaut empêche les liens de la
+    // barre de navigation de l'accueil de fonctionner...
+    // $urlRouterProvider.otherwise('/accueil');
 
     $stateProvider
     .state('home', {

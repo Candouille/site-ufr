@@ -1,5 +1,5 @@
-body {
-  font-family: Roboto, Arial, sans-serif;
+body{
+  font-family: 'Roboto', sans-serif;
 }
 
 /*Titre de chaque élément de la page*/
@@ -35,8 +35,8 @@ img.logo-accueil:hover{
 }
 
 .page-element{
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
 
 .navbar-ufr{
@@ -66,27 +66,106 @@ img.logo-accueil:hover{
   background-image:linear-gradient(rgb(140,140,140), rgb(70,70,70));
 }
 
-/*Carousel*/
+/************************************************************************/
+/*                               Carousel                               */
+/*                                                                      */
+/*On impose une taille fixe aux images                                  */
+/*On tachera d'en fournir avec un ratio 16:9 de dimension 1000*562px    */
+/************************************************************************/
 .ufr-carousel{
-  margin: auto;
-  width: 1000px;
-  height: 562px;
+  box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
 }
-/*On impose une taille fixe aux images*/
-/*On tachera d'en fournir avec un ratio 16:9 de dimension 1000*562px*/
-.ufr-carousel img{
-  width: 1000px;
-  height: 562px;
+.carousel-title, .carousel-subtitle{
+  display: block;
 }
-
-.ufr-carousel p, .ufr-carousel h3{
+/*Petit fond dégradé pour faire resortir les textes par dessus les images*/
+.ufr-carousel span{
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
 }
+@media (min-width: 769px) {
+  .carousel-title{
+    font-size: 24px;
+  }
+  .carousel-subtitle{
+    font-size: 15px;
+  }
+}
+@media (min-width: 1201px) {
+  .ufr-carousel{
+    margin: auto;
+    width: 990px;
+    height: 556px;
+  }
+  .ufr-carousel img{
+    width: 990px;
+    height: 556px;
+  }
+}
+@media (min-width:992px) and (max-width: 1200px) {
+  .ufr-carousel{
+    margin: auto;
+    width: 790px;
+    height: 444px;
+  }
+  .ufr-carousel img{
+    width: 790px;
+    height: 444px;
+  }
+}
+@media (min-width:770px) and (max-width: 991px) {
+  .ufr-carousel{
+    margin: auto;
+    width: 570px;
+    height: 320px;
+  }
+  .ufr-carousel img{
+    width: 570px;
+    height: 320px;
+  }
+}
+@media (max-width: 769px) {
+  .ufr-carousel{
+    margin: auto;
+    width: 300px;
+    height: 169px;
+    font-size: 9px;
+  }
+  .ufr-carousel img{
+    width: 300px;
+    height: 169px;
+  }
+  .carousel-title{
+    font-size: 15px;
+  }
+  .carousel-subtitle{
+    font-size: 9px;
+  }
+}
 
-.container-info{
+/************************************************************************/
+/*                         Actualités/News                              */
+/*                                                                      */
+/************************************************************************/
+@media (min-width: 992px) {
+  .container-news span.news-title{
+    font-size: 25px;
+  }
+  .container-news span.news-game{
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .container-news span.news-title{
+    font-size: 20px;
+  }
+  .container-news span.news-game{
+    font-size: 15px;
+  }
+}
+.container-news{
   /*on annule le padding instauré par le container-fluid :/ */
   padding-left: 0px;
-  padding-right: 0px;/*REGLER cette histoire d'allignement*/
+  padding-right: 0px;/*REGLER cette histoire d'alignement*/
 
   border-top: solid black 5px;
   border-left: solid black 5px;
@@ -103,17 +182,38 @@ img.logo-accueil:hover{
   background-repeat: no-repeat;
   background-position: center center;
   background-size:cover;
+  box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
 }
 
 .block-news:hover{
   cursor: pointer;
 }
 
-
-.block-news h2, .block-news p{
+.block-news span{
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
 }
 
+/************************************************************************/
+/*                            Nos Branches                              */
+/*                                                                      */
+/************************************************************************/
+
+@media (min-width: 992px) {
+  .container-jeux span.branch-name{
+    font-size: 25px;
+  }
+  .container-jeux span.branch-status{
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .container-jeux span.branch-name{
+    font-size: 20px;
+  }
+  .container-jeux span.branch-status{
+    font-size: 15px;
+  }
+}
 /*Style de conteneur de blocks jeu*/
 .container-jeux{
   margin: -10px -10px -10px -10px;
@@ -131,7 +231,7 @@ img.logo-accueil:hover{
   padding: 10px 10px 10px 10px;
 }
 
-.block-jeu h3, .block-jeu h4{
+.block-jeu span{
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
 }
 
@@ -147,6 +247,7 @@ img.logo-accueil:hover{
 
   height: 300px;
   line-height: 300px;
+  box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
 }
 
 .sous-block-jeu > h3{
@@ -174,6 +275,8 @@ img.logo-accueil:hover{
 
 .container-recrutement{
   text-align: center;
+  box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
+  background-image:linear-gradient(rgb(240,240,240), rgb(100,100,100));
 }
 
 .ufr-footer{
