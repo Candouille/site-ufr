@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('communauteUfrApp')
-  .controller('HomeController', function ($scope, $stateParams, $rootScope, $state) {
+  .controller('HomeController', function ($anchorScroll, $location, $scope, $stateParams, $rootScope, $state) {
 
     // Carousel
     // Fait avec : http://angular-ui.github.io/bootstrap/
@@ -9,6 +9,19 @@ angular.module('communauteUfrApp')
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [];
+
+    $scope.gotoAnchor = function(x) {
+      var newHash = x;
+      if ($location.hash() !== newHash) {
+        // set the $location.hash to `newHash` and
+        // $anchorScroll will automatically scroll to it
+        $location.hash(x);
+      } else {
+        // call $anchorScroll() explicitly,
+        // since $location.hash hasn't changed
+        $anchorScroll();
+      }
+    };
 
     slides.push({
       image: 'images/carousel/overwatch.png',

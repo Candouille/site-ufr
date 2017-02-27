@@ -11,11 +11,12 @@ angular
     'ui.router',
     'ui.bootstrap'
   ])
-  .config(function ($urlRouterProvider, $stateProvider) {
+  .config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
 
-    //Neutralisé pour le moment car ajouter un état par défaut empêche les liens de la
-    // barre de navigation de l'accueil de fonctionner...
-    // $urlRouterProvider.otherwise('/accueil');
+    //Redirige vers l'accueil si l'on tape une une url inexistante.
+    $urlRouterProvider.otherwise('/accueil');
+
+
 
     $stateProvider
     .state('home', {
@@ -32,10 +33,13 @@ angular
       templateUrl: 'views/news-page.html',
       controller: 'NewsController'
     });
-  })/*.state('branche', {
-    url: '/ufrPack/branche',
-    params:{
-      nomBranche: 'toto'
-    },
-    templateUrl: 'views/page-branche.html'
-  })*/;
+
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+  })
+  .run(['$anchorScroll', function($anchorScroll) {
+    //Ajoute un petit offset de 50px au dessus de la cible lorsque l'on clique sur une ancre.
+    $anchorScroll.yOffset = 50;
+}]);
