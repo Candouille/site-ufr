@@ -4,16 +4,13 @@ angular.module('communauteUfrApp').directive('blockNews', function(){
   return {
     restrict: 'E',
     scope:{
-      jeu:'=',
-      titre:'=',
-      img:'=',
-      file:'='
+      news:'='
     },
     controller: function ($scope, $state){
-      $scope.imageFond = { 'background-image': 'url(images/news/' + $scope.img + ')' };
+      $scope.imageFond = { 'background-image': 'url(images/news/' + $scope.news.img + ')' };
 
       $scope.goToNewsPage = function() {
-        $state.go('news', {newsTitle: $scope.titre, file: $scope.file});
+        $state.go('news', {newsTitle: $scope.news.name, news: $scope.news});
       };
     },
     templateUrl: 'views/directives/block-news.html'

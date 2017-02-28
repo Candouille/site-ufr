@@ -7,8 +7,12 @@
   <p>{{news.author}}</p>
   <p>{{news.date}}</p>
 
-  <div class="img-main">
+  <div ng-if="news.mainImage" class="img-main">
     <img ng-src="{{news.mainImage}}">
+  </div>
+
+  <div ng-if="news.mainVideo" class="video-main">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o6yS9q1Kaek" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <div data-ng-repeat="element in news.content"

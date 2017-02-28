@@ -39,12 +39,7 @@
 
     <div class="container-fluid container-news page-element">
       <div id="blocks-info">
-        <block-news data-ng-repeat="block in newsBlocks"
-                    jeu="block.jeu"
-                    titre="block.titre"
-                    img="block.img"
-                    file="block.file">
-        </block-news>
+        <block-news data-ng-repeat="block in newsBlocks" news="block"></block-news>
       </div>
     </div>
 

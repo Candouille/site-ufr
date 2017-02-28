@@ -28,7 +28,7 @@ angular
     .state('news', {
       url: '/news/{newsTitle}',
       params: {
-        file: null
+        news: null
       },
       templateUrl: 'views/news-page.html',
       controller: 'NewsController'

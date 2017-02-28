@@ -57,25 +57,35 @@ angular.module('communauteUfrApp')
 
 
     $scope.newsBlocks = [{
+      jeu:'World of Warships',
+      titre:'Tournoi King of the Sea II',
+      img: 'king-of-the-sea-2.png',
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      name: 'tournoi-king-of-the-sea-2'
+    },{
       jeu:'Planetside 2',
       titre:'Update des constructions',
       img: 'ps2.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      name: 'update-des-constructions'
     },{
       jeu:'World of Warships',
       titre:'Tournoi OMNI',
       img: 'wows.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      name: 'update-des-constructions'
     },{
       jeu:'Grand Theft Auto V',
       titre:'Motos, boulots, bobos',
       img: 'gtav.jpeg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      name: 'update-des-constructions'
     },{
       jeu:'Star Citizen',
       titre:'CitizenCon 2016',
       img: 'sc.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json'
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      name: 'update-des-constructions'
     }];
 
     $scope.blocksJeu = [{
