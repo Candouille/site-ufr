@@ -1,0 +1,25 @@
+.ufr-header{
+  background-image:linear-gradient(black, white);
+  text-align: center;
+}
+
+.logo-accueil{
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .logo-accueil{
+    height: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .logo-accueil{
+    height: 150px;
+  }
+}
+
+img.logo-accueil:hover{
+  cursor: pointer;
+}
