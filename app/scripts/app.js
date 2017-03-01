@@ -34,10 +34,13 @@ angular
       controller: 'NewsController'
     });
 
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+    //Permet de faire disparaître les #! que l'on retrouve dans l'url.
+    // Mais j'ai le neutraliser car les images stockées sur le répo github ne sont pas
+    // récupérées correctement (le "/site-ufr" n'est pas ajouté lorsque angular tente de charger les images)
+    // $locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    // });
   })
   .run(['$anchorScroll', function($anchorScroll) {
     //Ajoute un petit offset de 50px au dessus de la cible lorsque l'on clique sur une ancre.
