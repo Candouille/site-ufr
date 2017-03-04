@@ -1,5 +1,5 @@
 .ufr-header{
-  background-image:linear-gradient(black, white);
+  /*background-image:linear-gradient(black, white);*/
   text-align: center;
 }
 
@@ -22,4 +22,9 @@
 
 img.logo-accueil:hover{
   cursor: pointer;
+}
+
+.ufr-footer{
+  text-align: center;
+  /*background-image:linear-gradient(white, black);*/
 }
