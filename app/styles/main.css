@@ -2,6 +2,36 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+/************************************************************************/
+/*                           Image de fond                              */
+/*                                                                      */
+/************************************************************************/
+
+@media (min-width: 1921px), (min-height: 1081px) {
+  body.background-wows{
+    background: url("../images/backgrounds/wows-wallpaper-QHD.png") fixed center;
+  }
+  body.background-ps2{
+    background: url("../images/backgrounds/ps2-wallpaper-QHD.png") fixed center;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1920px) and (max-height: 1080px), (min-height: 721px) and (max-height: 1080px) and (max-width: 1920px){
+  body.background-wows {
+    background: url("../images/backgrounds/wows-wallpaper-Full-HD.png") fixed center;
+  }
+  body.background-ps2 {
+    background: url("../images/backgrounds/ps2-wallpaper-Full-HD.png") fixed center;
+  }
+}
+@media (max-width: 1280px) and (max-height: 720px) {
+  body.background-wows {
+    background: url("../images/backgrounds/wows-wallpaper-HD.png") fixed center;
+  }
+  body.background-ps2 {
+    background: url("../images/backgrounds/ps2-wallpaper-HD.png") fixed center;
+  }
+}
+
 /*Titre de chaque élément de la page*/
 .ufr-home > div > h2{
   text-align: center;
@@ -264,9 +294,4 @@ body{
   text-align: center;
   box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
   background-image:linear-gradient(rgb(240,240,240), rgb(100,100,100));
-}
-
-.ufr-footer{
-  text-align: center;
-  background-image:linear-gradient(white, black);
 }
