@@ -3,6 +3,14 @@
   text-align: center;
 }
 
+.header-text {
+  border: solid black 2px;
+  border-radius: 8px;
+  display: inline-block;
+  background: radial-gradient(rgba(250,250,250,1), rgba(250,250,250,0.3));
+  padding: 10px;
+}
+
 .logo-accueil{
   display: block;
   margin: auto;
@@ -24,7 +32,21 @@ img.logo-accueil:hover{
   cursor: pointer;
 }
 
+
+/*Titre de chaque élément de la page*/
+.section-title {
+  border: solid black 2px;
+  border-radius: 8px;
+  background: radial-gradient(rgba(250,250,250,1), rgba(250,250,250,0.3));
+  padding: 10px;
+  text-align: center;
+}
+
+.section-title h2{
+  margin-top: 10px;
+}
+
 .ufr-footer{
   text-align: center;
-  /*background-image:linear-gradient(white, black);*/
+  background-image:linear-gradient(rgba(250,250,250,0.2), rgba(250,250,250,1));
 }
