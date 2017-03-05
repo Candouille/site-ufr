@@ -49,6 +49,6 @@ angular
     //Ajoute de manière aléatoire un background
     var gamesList = ['wows', 'ps2'];
     var gameChosenIndex = Math.floor((Math.random() * gamesList.length));
-    
+
     angular.element(document.querySelector( 'body' )).addClass('background-' + gamesList[gameChosenIndex]);
 }]);

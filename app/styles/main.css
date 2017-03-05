@@ -143,12 +143,9 @@ body{
 @media (max-width: 769px) {
   .ufr-carousel{
     margin: auto;
-    width: 300px;
-    height: 169px;
     font-size: 9px;
   }
   .ufr-carousel img{
-    width: 300px;
     height: 169px;
   }
   .carousel-title{
