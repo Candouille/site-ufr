@@ -1,11 +1,18 @@
 <div ng-controller="NewsController">
 
-  <h1>{{news.title}}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-med-3 col-sm-3 col-xs-3"></div>
+      <div class="col-lg-6 col-med-6 col-sm-6 col-xs-6 block-title">
+        <h2>{{news.title}}</h2>
+        <h3>{{news.subtitle}}</h3>
+        <p>{{news.author}}</p>
+        <p>{{news.date}}</p>
+      </div>
+      <div class="col-lg-3 col-med-3 col-sm-3 col-xs-3"></div>
+    </div>
+  </div>
 
-  <h2>{{news.subtitle}}</h2>
-
-  <p>{{news.author}}</p>
-  <p>{{news.date}}</p>
 
   <div ng-if="news.mainImage" class="img-main">
     <img ng-src="{{news.mainImage}}">
@@ -15,13 +22,39 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/o6yS9q1Kaek" frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <div data-ng-repeat="element in news.content"
-       class="news-content"
-       ng-class="$index%2 === 0 ? 'content-even' : 'content-odd'">
+  <div class="container">
 
-      <p>{{element.text}}</p>
-      <img ng-src="{{element.image}}">
+    <div data-ng-repeat="element in news.content"
+         class="news-content row"
+         ng-class="$index%2 === 0 ? 'content-even' : 'content-odd'">
 
+      <!--Pour les devices suffisamment grands-->
+      <!--On alterne la disposition des paragraphes et des images-->
+
+      <p ng-if="$index%2 === 0"
+         class="col-lg-7 col-med-7 col-sm-6 news-for-non-xs-only">
+        {{element.text}}
+      </p>
+      <img ng-if="$index%2 === 0"
+           ng-src="{{element.image}}"
+           class="col-lg-4 col-med-4 col-sm-5 news-for-non-xs-only">
+
+      <img ng-if="$index%2 === 1"
+           ng-src="{{element.image}}"
+           class="col-lg-4 col-med-4 col-sm-5 news-for-non-xs-only">
+      <p ng-if="$index%2 === 1"
+         class="col-lg-7 col-med-7 col-sm-6 news-for-non-xs-only">
+        {{element.text}}
+      </p>
+
+      <!--Pour les autres, (les smartphones) on affiche tout dans le même ordre-->
+      <p class="col-xs-12 news-for-xs-only">
+        {{element.text}}
+      </p>
+      <img ng-src="{{element.image}}" class="col-xs-12 news-for-xs-only">
+
+    </div>
   </div>
+
 
 </div>

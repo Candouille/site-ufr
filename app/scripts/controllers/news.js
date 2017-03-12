@@ -27,7 +27,7 @@ angular.module('communauteUfrApp')
       "update-des-constructions": {
       date: "2017/02/25",
       author: "Candax",
-      title: "Un nouveau fighter arrive : le Hurricane !",
+      title: "Un nouveau fighter arrive: le Hurricane !",
       subtitle: "",
       mainVideo: null,
       mainImage: "https://robertsspaceindustries.com/media/iv9t115yjn48pr/store_slideshow_large/SkyFlight-V02-Copy.jpg",
