@@ -43,6 +43,11 @@ body{
   margin-bottom: 70px;
 }
 
+/************************************************************************/
+/*                         Barre de navigation                          */
+/*                                                                      */
+/************************************************************************/
+
 .navbar-ufr{
   border: solid black 1px;
   border-radius: 7px;
@@ -73,7 +78,7 @@ body{
   text-decoration: none;
 }
 
-.navbar-ufr-list li:hover{
+.navbar-ufr-list li:hover {
   border-radius: 7px;
   background-image:linear-gradient(rgb(140,140,140), rgb(70,70,70));
 }
@@ -182,16 +187,33 @@ body{
 
 /*Style pour un block*/
 .block-news{
+  height: 150px;
+  padding: 0px;
   color: white;
   font-weight: bold;
   border-right: solid black 5px;
   border-bottom: solid black 5px;
   /*text-shadow: 2px 2px white;*/
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: no-repeat center center;
   background-size:cover;
   box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
+}
+
+.sub-block-news {
+  padding-top: 17px;
+  height: 150px;
+  transition: background-color 1s;
+}
+
+.sub-block-news:hover{
+  height: 150px;
+  background-color: rgba(0,0,0,0.5);
+  transition: background-color 0.5s;
+}
+
+.sub-block-news:hover span{
+  background: radial-gradient(rgba(50,50,50,0), rgba(50,50,50,0));
 }
 
 .block-news:hover{
@@ -200,6 +222,7 @@ body{
 
 .block-news span{
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
+  display: block;
 }
 
 /************************************************************************/
@@ -223,7 +246,7 @@ body{
     font-size: 15px;
   }
 }
-/*Style de conteneur de blocks jeu*/
+
 .container-jeux{
   margin: -10px -10px -10px -10px;
 
@@ -238,46 +261,56 @@ body{
 
 .block-jeu{
   padding: 10px 10px 10px 10px;
+  height: 270px;
+  transition: background-color 1s;
 }
 
-.block-jeu span{
-  background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
-}
-
-.sous-block-jeu:hover{
+.block-branche-background:hover {
   cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+  transition: background-color 0.5s;
 }
 
-.sous-block-jeu{
+.block-branche-background {
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: no-repeat center center;
   background-size:cover;
 
-  height: 300px;
-  line-height: 300px;
+  height: 250px;
+  line-height: 250px;
   box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
 }
 
-.sous-block-jeu > h3{
-  /*line-height:150px;*/
-  /*vertical-align: bottom;*/
-}
-
-.sous-block-jeu > h4{
-  /*line-height:150px;*/
-  /*vertical-align: top;*/
-}
-
-.text-sous-block-jeu{
-  width:80%; /* largeur du bloc */
+.block-branche-shadow-and-text {
+  height: 250px;
+  padding-top: 70px;
   vertical-align:middle;
-  display:inline-block;
   line-height:1.2; /* on rétablit le line-height */
   text-align:center; /* ... et l'alignement du texte */
+  transition: background-color 1s;
 }
 
-/*Style de la zone dédiée au recrutement*/
+.block-branche-shadow-and-text span {
+  display: block;
+}
+
+.block-branche-shadow-and-text:hover {
+  background-color: rgba(0,0,0,0.5);
+  transition: background-color 0.5s;
+}
+
+.block-jeu span {
+  background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
+}
+
+.block-jeu:hover span {
+  background: radial-gradient(rgba(50,50,50,0), rgba(50,50,50,0));
+}
+
+/************************************************************************/
+/*                             Recrutement                              */
+/*                                                                      */
+/************************************************************************/
 .recrutement{
   text-align: center;
 }
