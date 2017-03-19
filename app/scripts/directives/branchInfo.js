@@ -4,10 +4,9 @@ angular.module('communauteUfrApp').directive('branchInfo', function(){
   return {
     restrict: 'E',
     scope:{
-      nom:'='
+      info:'='
     },
     controller: function ($scope){
-
 
     },
     templateUrl: 'views/directives/branch-info.html'

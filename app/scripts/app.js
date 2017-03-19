@@ -32,6 +32,12 @@ angular
       },
       templateUrl: 'views/news-page.html',
       controller: 'NewsController'
+    })
+
+    .state('branch-ps2', {
+      url: '/branche-ps2',
+      templateUrl: 'views/branch-ps2-page.html',
+      controller: 'BranchPS2Controller'
     });
 
     //Permet de faire disparaître les #! que l'on retrouve dans l'url.

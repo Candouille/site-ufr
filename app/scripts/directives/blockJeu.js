@@ -18,8 +18,8 @@ angular.module('communauteUfrApp').directive('blockJeu', function($state){
     controller: function ($scope){
       $scope.imageFond = { 'background-image': 'url(images/branches/' + $scope.img + ')' };
 
-      $scope.changeState = function () {
-        $state.go('branche', {nomBranche: $scope.branche});
+      $scope.goToBranch = function () {
+        $state.go('branch-' + $scope.branche);
       };
     },
     templateUrl: 'views/directives/block-jeu.html'
