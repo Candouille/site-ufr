@@ -7,8 +7,12 @@ angular.module('communauteUfrApp')
 
     if($rootScope.goToHome === undefined){
       $rootScope.goToHome = function(){
-        $state.go('accueil');
+        $state.go('home');
       };
+    }
+
+    if(!$stateParams.news){
+      $rootScope.goToHome();
     }
 
     // $scope.title = $stateParams.newsTitle;
