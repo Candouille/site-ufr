@@ -56,8 +56,18 @@ angular.module('communauteUfrApp')
         text: "Suite au premier tournoi King of the Sea, l'UFR est bien décidée à se démarquer lors de la nouvelle édition qui aura lieu le samedi 4 et le dimanche 5 mars. Le format sera le même que précédemment: des matchs en T8 opposant des équipes en 9 vs 9.",
         image: "https://s2.qwant.com/thumbr/0x0/f/6/c1a6572d43be7522fb94ec7c3ccf51/b_1_q_0_p_0.jpg?u=http%3A%2F%2Fwww.tapeciarnia.pl%2Ftapety%2Fnormalne%2F243011_world_of_warships.jpg&q=0&b=1&p=0&a=1"
       }]
-
-    }};
+    }, "lots-2-m3":{
+          date: "2017/10/01",
+          author: "GizonLounar",
+          title: "Match Lots",
+          subtitle: "UFR vs WGP2W",
+          mainVideo: null,
+          mainImage: "https://yt3.ggpht.com/-GWTmdFV3oJ0/AAAAAAAAAAI/AAAAAAAAAAA/11R-8kRpNUI/s288-c-k-no-mo-rj-c0xffffff/photo.jpg",
+          content: [{
+            text: "Troisième match pour l'UFR dans la League of the Sea II. Ce match nous opposera à la WGP2W le jeudi 5 octobre à 21h. Le format est toujours en 9 vs 9 en T8. Le stream du match sera hébergé par notre chaîne twitch : https://twitch.tv/unitefrancophone ",
+            image: "https://s2.qwant.com/thumbr/0x0/f/6/c1a6572d43be7522fb94ec7c3ccf51/b_1_q_0_p_0.jpg?u=http%3A%2F%2Fwww.tapeciarnia.pl%2Ftapety%2Fnormalne%2F243011_world_of_warships.jpg&q=0&b=1&p=0&a=1"
+          }]
+        }};
 
     $scope.news = newsList[$stateParams.news.name];
 

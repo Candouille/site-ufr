@@ -58,6 +58,12 @@ angular.module('communauteUfrApp')
 
     $scope.newsBlocks = [{
       jeu:'World of Warships',
+      titre:'Match Lots',
+      img: 'wows.jpg',
+      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      name: 'lots-2-m3'
+    },{
+      jeu:'World of Warships',
       titre:'Tournoi King of the Sea II',
       img: 'king-of-the-sea-2.png',
       file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
