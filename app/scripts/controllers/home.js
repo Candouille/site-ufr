@@ -60,13 +60,13 @@ angular.module('communauteUfrApp')
       jeu:'World of Warships',
       titre:'Match Lots',
       img: 'wows.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      file: '2017-10-01-lots-2-m3.json',
       name: 'lots-2-m3'
     },{
       jeu:'World of Warships',
       titre:'Tournoi King of the Sea II',
       img: 'king-of-the-sea-2.png',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
+      file: '2017-02-27-tournoi-king-of-the-sea-2.json',
       name: 'tournoi-king-of-the-sea-2'
     },{
       jeu:'Planetside 2',
