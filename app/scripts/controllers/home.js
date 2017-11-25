@@ -58,7 +58,13 @@ angular.module('communauteUfrApp')
 
     $scope.newsBlocks = [{
       jeu:'World of Warships',
-      titre:'Match Lots',
+      titre:'LotS saison II : UFR vainqueure',
+      img: 'king-of-the-sea-2.png',
+      file: '2017-11-20-ufr-wins-lots-2.json',
+      name: 'ufr-wins-lots-2'
+    },{
+      jeu:'World of Warships',
+      titre:'Match LotS',
       img: 'wows.jpg',
       file: '2017-10-01-lots-2-m3.json',
       name: 'lots-2-m3'
@@ -75,12 +81,6 @@ angular.module('communauteUfrApp')
       file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
       name: 'update-des-constructions'
     },{
-      jeu:'World of Warships',
-      titre:'Tournoi OMNI',
-      img: 'wows.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
-      name: 'update-des-constructions'
-    },{
       jeu:'Grand Theft Auto V',
       titre:'Motos, boulots, bobos',
       img: 'gtav.jpeg',
@@ -88,10 +88,10 @@ angular.module('communauteUfrApp')
       name: 'update-des-constructions'
     },{
       jeu:'Star Citizen',
-      titre:'CitizenCon 2016',
+      titre:'Un nouveau fighter',
       img: 'sc.jpg',
       file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
-      name: 'update-des-constructions'
+      name: 'un-nouveau-fighter'
     }];
 
     $scope.blocksJeu = [{
