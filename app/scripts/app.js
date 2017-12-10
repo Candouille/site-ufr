@@ -45,10 +45,4 @@ angular
   .run(['$anchorScroll', function($anchorScroll) {
     //Ajoute un petit offset de 50px au dessus de la cible lorsque l'on clique sur une ancre.
     $anchorScroll.yOffset = 50;
-
-    //Ajoute de manière aléatoire un background
-    var gamesList = ['wows', 'ps2'];
-    var gameChosenIndex = Math.floor((Math.random() * gamesList.length));
-
-    angular.element(document.querySelector( 'body' )).addClass('background-' + gamesList[gameChosenIndex]);
 }]);
