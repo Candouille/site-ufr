@@ -58,6 +58,12 @@ angular.module('communauteUfrApp')
 
     $scope.newsBlocks = [{
       jeu:'World of Warships',
+      titre:'Bomber Crew',
+      img: 'bomber-crew.jpg',
+      file: '2017-12-17-bomber-crew.json',
+      name: 'bomber-crew'
+    },{
+      jeu:'World of Warships',
       titre:'LotS saison II : UFR vainqueure',
       img: 'king-of-the-sea-2.png',
       file: '2017-11-20-ufr-wins-lots-2.json',
