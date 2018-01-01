@@ -57,7 +57,7 @@ angular.module('communauteUfrApp')
 
 
     $scope.newsBlocks = [{
-      jeu:'World of Warships',
+      jeu:'Découverte',
       titre:'Bomber Crew',
       img: 'bomber-crew.jpg',
       file: '2017-12-17-bomber-crew.json',
