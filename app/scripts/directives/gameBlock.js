@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('communauteUfrApp').directive('blockJeu', function($state){
+angular.module('communauteUfrApp').directive('gameBlock', function($state){
   return {
     /*restrict: Indique sous quelle forme la directive doit être utilisée dans un template html
      'E' => sous forme d'élément: <ma-directive title="Paramètres">...</ma-directive>
@@ -10,18 +10,15 @@ angular.module('communauteUfrApp').directive('blockJeu', function($state){
      */
     restrict: 'E',
     scope:{
-      titre:'=',
-      sousTitre:'=',
-      img:"=",
-      branche:"="
+      game:'='
     },
     controller: function ($scope){
-      $scope.imageFond = { 'background-image': 'url(images/branches/' + $scope.img + ')' };
+      $scope.imageFond = { 'background-image': 'url(images/branches/' + $scope.game.img + ')' };
 
       $scope.changeState = function () {
-        $state.go('branche', {nomBranche: $scope.branche});
+        $state.go('branch', {branchName: $scope.game.branch});
       };
     },
-    templateUrl: 'views/directives/block-jeu.html'
+    templateUrl: 'views/directives/game-block.html'
   };
 });

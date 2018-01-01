@@ -261,7 +261,7 @@ body {
   font-weight: bold;
 }
 
-.block-jeu{
+.game-block{
   padding: 10px 10px 10px 10px;
   height: 270px;
   transition: background-color 1s;
@@ -301,11 +301,11 @@ body {
   transition: background-color 0.5s;
 }
 
-.block-jeu span {
+.game-block span {
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
 }
 
-.block-jeu:hover span {
+.game-block:hover span {
   background: radial-gradient(rgba(50,50,50,0), rgba(50,50,50,0));
 }
 
