@@ -7,7 +7,8 @@ body{
 /*                                                                      */
 /************************************************************************/
 
-@media (min-width: 1921px), (min-height: 1081px) {
+/* Dynamic background according to screen size */
+/* @media (min-width: 1921px), (min-height: 1081px) {
   html {
     background: url("../images/backgrounds/blue-sea-sky-4K.png") fixed center;
   }
@@ -21,6 +22,11 @@ body{
   html {
     background: url("../images/backgrounds/blue-sea-sky-HD.png") fixed center;
   }
+} */
+
+html {
+  /* background-color: black; */
+  background-color: rgb(0, 25, 66);
 }
 
 html {
