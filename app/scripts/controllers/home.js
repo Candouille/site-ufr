@@ -57,6 +57,18 @@ angular.module('communauteUfrApp')
 
 
     $scope.newsBlocks = [{
+      theme:'World of Warships',
+      title:'Le retour du Twitch',
+      img: 'wows3.jpg',
+      file: '2018-01-02-maman-je-passe-a-la-tele.json',
+      route: 'maman-je-passe-a-la-tele'
+    },{
+      theme:'World of Warships',
+      title:'Fin de la 1ère saison des batailles de clan',
+      img: 'wows2.jpg',
+      file: '2018-01-01-sortez-la-cb.json',
+      route: 'sortez-la-cb'
+    },{
       theme:'Découverte',
       title:'Bomber Crew',
       img: 'bomber-crew.jpg',
@@ -65,7 +77,7 @@ angular.module('communauteUfrApp')
     },{
       theme:'World of Warships',
       title:'LotS saison II : UFR vainqueure',
-      img: 'king-of-the-sea-2.png',
+      img: 'wows-carrier.jpg',
       file: '2017-11-20-ufr-wins-lots-2.json',
       route: 'ufr-wins-lots-2'
     },{
@@ -92,12 +104,6 @@ angular.module('communauteUfrApp')
       img: 'gtav.jpeg',
       file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
       route: 'update-des-constructions'
-    },{
-      theme:'Star Citizen',
-      title:'Un nouveau fighter',
-      img: 'sc.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
-      route: 'un-nouveau-fighter'
     }];
 
     $scope.gameBlocks = [{
