@@ -24,15 +24,15 @@ angular.module('communauteUfrApp')
     };
 
     slides.push({
-      image: 'images/carousel/overwatch.png',
-      title: 'On lvl up sur Overwatch !',
-      text: 'Si le matchmaking le veut bien...',
+      image: 'images/carousel/sc-3-01.jpg',
+      title: 'La 3.0 est là !',
+      text: 'Les FPS un peu moins... Mais la 3.0 est là quand même :D',
       id: 0
     });
     slides.push({
-      image: 'images/carousel/sc3-0-soon.png',
-      title: 'La 3.0 arrive bientôt !',
-      text: 'Et peut-être même qu\'un jour, Star Citizen sera terminé pour de vrai !',
+      image: 'images/carousel/overwatch.png',
+      title: 'On lvl up sur Overwatch !',
+      text: 'Si le matchmaking le veut bien...',
       id: 1
     });
     slides.push({
