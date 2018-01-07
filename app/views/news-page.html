@@ -2,14 +2,14 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-med-3 col-sm-3 col-xs-3"></div>
-      <div class="col-lg-6 col-med-6 col-sm-6 col-xs-6 block-title">
+      <div class="col-lg-2 col-med-3 col-sm-1"></div>
+      <div class="col-lg-8 col-med-6 col-sm-10 block-title">
         <h2>{{news.title}}</h2>
         <h3>{{news.subtitle}}</h3>
         <p>{{news.author}}</p>
         <p>{{news.date}}</p>
       </div>
-      <div class="col-lg-3 col-med-3 col-sm-3 col-xs-3"></div>
+      <div class="col-lg-2 col-med-3 col-sm-1"></div>
     </div>
   </div>
 
@@ -22,39 +22,38 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/o6yS9q1Kaek" frameborder="0" allowfullscreen></iframe>
     </div>
 
-
-
+    <!--If the screen device is big enought, -->
+    <!--we alternates the images and paragraphes display-->
     <div data-ng-repeat="element in news.content"
-         class="news-content row"
-         ng-class="$index%2 === 0 ? 'content-even' : 'content-odd'">
+         class="news-content row news-for-non-xs-only">
 
-      <!--Pour les devices suffisamment grands-->
-      <!--On alterne la disposition des paragraphes et des images-->
+        <!--Display for even index-->
+        <p ng-if="$index%2 === 0"
+        ng-class="element.image !== null ? 'col-lg-7 col-med-7 col-sm-6' : ''">
+          {{element.text}}
+        </p>
+        <img ng-if="$index%2 === 0 && element.image !== null"
+              ng-src="{{element.image}}"
+              class="col-lg-4 col-med-4 col-sm-5">
+        <!--Display for odd index-->
+        <img ng-if="$index%2 === 1 && element.image !== null"
+              ng-src="{{element.image}}"
+              class="col-lg-4 col-med-4 col-sm-5">
+        <p ng-if="$index%2 === 1"
+            ng-class="element.image !== null ? 'col-lg-7 col-med-7 col-sm-6' : ''">
+            {{element.text}}
+        </p>
+    </div>
 
-      <p ng-if="$index%2 === 0"
-         class="col-lg-7 col-med-7 col-sm-6 news-for-non-xs-only">
-        {{element.text}}
-      </p>
-      <img ng-if="$index%2 === 0"
-           ng-src="{{element.image}}"
-           class="col-lg-4 col-med-4 col-sm-5 news-for-non-xs-only">
+    <!--If the device is too small, everything is displayed in the same order-->
+    <div data-ng-repeat="element in news.content"
+         class="news-content row news-for-xs-only">
 
-      <img ng-if="$index%2 === 1"
-           ng-src="{{element.image}}"
-           class="col-lg-4 col-med-4 col-sm-5 news-for-non-xs-only">
-      <p ng-if="$index%2 === 1"
-         class="col-lg-7 col-med-7 col-sm-6 news-for-non-xs-only">
-        {{element.text}}
-      </p>
-
-      <!--Pour les autres, (les smartphones) on affiche tout dans le même ordre-->
-      <p class="col-xs-12 news-for-xs-only">
-        {{element.text}}
-      </p>
-      <img ng-src="{{element.image}}" class="col-xs-12 news-for-xs-only">
-
+         <p class="col-xs-12">
+           {{element.text}}
+         </p>
+         <img ng-src="{{element.image}}" class="col-xs-12">
     </div>
   </div>
-
 
 </div>
