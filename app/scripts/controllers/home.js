@@ -24,7 +24,7 @@ angular.module('communauteUfrApp')
     };
 
     slides.push({
-      image: 'images/carousel/sc-3-01.jpg',
+      image: 'images/carousel/sc-3-0.jpg',
       title: 'La 3.0 est là !',
       text: 'Les FPS un peu moins... Mais la 3.0 est là quand même :D',
       id: 0
