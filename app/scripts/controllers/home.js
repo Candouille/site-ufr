@@ -25,7 +25,7 @@ angular.module('communauteUfrApp')
 
     slides.push({
       image: 'images/carousel/kots5.jpg',
-      title: 'L\'UFR repare à l\'assaut du titre',
+      title: 'L\'UFR repart à l\'assaut du titre',
       text: 'En présentant deux équipes !',
       id: 0
     });
