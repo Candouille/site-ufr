@@ -24,28 +24,34 @@ angular.module('communauteUfrApp')
     };
 
     slides.push({
-      image: 'images/carousel/sc-3-0.jpg',
-      title: 'La 3.0 est là !',
-      text: 'Les FPS un peu moins... Mais la 3.0 est là quand même :D',
+      image: 'images/carousel/kots5.jpg',
+      title: 'L\'UFR repare à l\'assaut du titre',
+      text: 'En présentant deux équipes !',
       id: 0
+    });
+    slides.push({
+      image: 'images/carousel/sc-3-0.jpg',
+      title: 'King of the Sea V',
+      text: 'Les FPS un peu moins... Mais la 3.0 est là quand même :D',
+      id: 1
     });
     slides.push({
       image: 'images/carousel/overwatch.png',
       title: 'On lvl up sur Overwatch !',
       text: 'Si le matchmaking le veut bien...',
-      id: 1
+      id: 2
     });
     slides.push({
       image: '//image.noelshack.com/fichiers/2016/47/1480287464-gtav.png',
       title: 'L\'UFR est sur GTA !',
       text: 'Le respect peut aller se faire foutre. La décence aussi...',
-      id: 2
+      id: 3
     });
     slides.push({
       image: '//image.noelshack.com/fichiers/2016/47/1480286066-prowler.png',
       title: 'Le Prowler, la relève du Galaxie',
       text: 'Get in the gal ! Get in the fucking ga... My mistake. Get in the Prowler !',
-      id: 3
+      id: 4
     });
 
 
@@ -57,6 +63,12 @@ angular.module('communauteUfrApp')
 
 
     $scope.newsBlocks = [{
+      theme:'World of Warships',
+      title:'King of the Sea V',
+      img: 'ships-fleet.jpg',
+      file: '2018-01-10-one-step-from-heaven.json',
+      route: 'one-step-from-heaven'
+    },{
       theme:'World of Warships',
       title:'Le retour du Twitch',
       img: 'wows3.jpg',
@@ -92,12 +104,6 @@ angular.module('communauteUfrApp')
       img: 'king-of-the-sea-2.png',
       file: '2017-02-27-tournoi-king-of-the-sea-2.json',
       route: 'tournoi-king-of-the-sea-2'
-    },{
-      theme:'Planetside 2',
-      title:'Update des constructions',
-      img: 'ps2.jpg',
-      file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
-      route: 'update-des-constructions'
     },{
       theme:'Grand Theft Auto V',
       title:'Motos, boulots, bobos',
