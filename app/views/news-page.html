@@ -28,21 +28,21 @@
          class="news-content row news-for-non-xs-only">
 
         <!--Display for even index-->
-        <p ng-if="$index%2 === 0"
-        ng-class="element.image !== null ? 'col-lg-7 col-med-7 col-sm-6' : ''">
-          {{element.text}}
-        </p>
-        <img ng-if="$index%2 === 0 && element.image !== null"
-              ng-src="{{element.image}}"
-              class="col-lg-4 col-med-4 col-sm-5">
+        <div ng-if="$index%2 === 0"
+        ng-class="element.image !== null ? 'col-lg-7 col-med-7 col-sm-7' : 'col-lg-12'">
+          <p>{{element.text}}</p>
+        </div>
+        <div ng-if="$index%2 === 0 && element.image !== null" class="col-lg-5 col-med-5 col-sm-5">
+          <img ng-src="{{element.image}}">
+        </div>
         <!--Display for odd index-->
-        <img ng-if="$index%2 === 1 && element.image !== null"
-              ng-src="{{element.image}}"
-              class="col-lg-4 col-med-4 col-sm-5">
-        <p ng-if="$index%2 === 1"
-            ng-class="element.image !== null ? 'col-lg-7 col-med-7 col-sm-6' : ''">
-            {{element.text}}
-        </p>
+        <div ng-if="$index%2 === 1 && element.image !== null" class="col-lg-5 col-med-5 col-sm-5">
+          <img ng-src="{{element.image}}">
+        </div>
+        <div ng-if="$index%2 === 1"
+        ng-class="element.image !== null ? 'col-lg-7 col-med-7 col-sm-7' : 'col-lg-12'">
+          <p>{{element.text}}</p>
+        </div>
     </div>
 
     <!--If the device is too small, everything is displayed in the same order-->
