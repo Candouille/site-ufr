@@ -1,0 +1,28 @@
+.branch-container {
+  background: rgba(0,0,0,0.5);
+  margin-top: 40px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.container{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.branch-info {
+  text-align: center;
+}
+
+.branch-info span {
+  display: block;
+}
+
+.branch-info img {
+  width: 100%;
+}

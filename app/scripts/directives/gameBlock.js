@@ -16,7 +16,7 @@ angular.module('communauteUfrApp').directive('gameBlock', function($state){
       $scope.imageFond = { 'background-image': 'url(images/branches/' + $scope.game.img + ')' };
 
       $scope.changeState = function () {
-        $state.go('branch-', {branchName: $scope.game.branch});
+        $state.go('branch-' + $scope.game.branch, {branchName: $scope.game.branch});
       };
     },
     templateUrl: 'views/directives/game-block.html'
