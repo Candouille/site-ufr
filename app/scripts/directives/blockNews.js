@@ -10,7 +10,7 @@ angular.module('communauteUfrApp').directive('blockNews', function(){
       $scope.imageFond = { 'background-image': 'url(images/news/' + $scope.news.img + ')' };
 
       $scope.goToNewsPage = function() {
-        $state.go('news', {newsTitle: $scope.news.name, news: $scope.news});
+        $state.go('news', {newsTitle: $scope.news.route, news: $scope.news});
       };
     },
     templateUrl: 'views/directives/block-news.html'

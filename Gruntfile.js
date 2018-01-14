@@ -9,6 +9,7 @@
 
 module.exports = function (grunt) {
 
+  //Tache nécessaire à la publication sur github pages
   grunt.loadNpmTasks('grunt-build-control');
 
   var pkg = require('./package.json');
@@ -387,6 +388,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+            'CNAME',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
@@ -400,6 +402,11 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/texts/news',
+          src: '*',
+          dest: '<%= yeoman.dist %>/texts/news'
         }]
       },
       styles: {
