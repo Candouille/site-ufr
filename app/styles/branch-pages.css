@@ -16,13 +16,34 @@
 }
 
 .branch-info {
-  text-align: center;
-}
-
-.branch-info span {
-  display: block;
+  border-left: solid white 2px;
+  border-bottom: solid white 2px;
 }
 
 .branch-info img {
   width: 100%;
+}
+
+.branch-info table {
+  /* border: solid white 1px; */
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.branch-info tbody {
+  display: table-row-group;
+}
+
+.branch-info tr {
+  display: table-row;
+}
+
+.branch-info th {
+  padding-top: 3px;
+  padding-left: 7px;
+}
+
+.branch-info td {
+  padding-top: 3px;
+  display: table-cell;
 }
