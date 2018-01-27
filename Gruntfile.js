@@ -407,6 +407,11 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>/texts/news',
           src: '*',
           dest: '<%= yeoman.dist %>/texts/news'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/texts/timeline',
+          src: '*',
+          dest: '<%= yeoman.dist %>/texts/timeline'
         }]
       },
       styles: {

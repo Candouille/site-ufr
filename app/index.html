@@ -81,9 +81,12 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/moment/locale/fr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <!-- To have dates in French-->
+    <!-- This source need to be outside the bower components sources list not to be removed by the "serve" gradle task -->
+    <script src="bower_components/moment/locale/fr.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>

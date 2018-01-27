@@ -70,7 +70,9 @@
       <div class="col-lg-4 col-md-4">
         <branch-info info="ps2Info"></branch-info>
 
-        <vertical-timeline content="ps2Timeline"></vertical-timeline>
+        <vertical-timeline events="timelineEvents"
+                            ng-if="timelineEvents !== undefined">
+        </vertical-timeline>
       </div>
   </div>
 
