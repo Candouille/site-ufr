@@ -13,7 +13,7 @@ angular.module('communauteUfrApp').directive('gameBlock', function($state){
       game:'='
     },
     controller: function ($scope){
-      $scope.imageFond = { 'background-image': 'url(images/branches/' + $scope.game.img + ')' };
+      $scope.backgroundImg = { 'background-image': 'url(images/branches/' + $scope.game.img + ')' };
 
       $scope.changeState = function () {
         $state.go('branch', {branchName: $scope.game.branch});

@@ -1,7 +1,9 @@
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 block-news" data-ng-style="imageFond">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 block-news" data-ng-style="backgroundImg">
   <div ng-click="goToNewsPage()" class="sub-block-news">
-    <span class="news-title">{{news.title}}</span>
-    <hr>
-    <span class="news-game">{{news.theme}}</span>
+    <div class="news-title-date">
+      <span class="title">{{news.title}}</span>
+      <span class="date">{{news.date}}</span>
+      <span class="game">{{news.theme}}</span>
+    </div>
   </div>
 </div>

@@ -44,14 +44,8 @@ angular.module('communauteUfrApp')
     slides.push({
       image: '//image.noelshack.com/fichiers/2016/47/1480287464-gtav.png',
       title: 'L\'UFR est sur GTA !',
-      text: 'Le respect peut aller se faire foutre. La décence aussi...',
+      text: 'Le respect peut aller se faire voir. La décence aussi...',
       id: 3
-    });
-    slides.push({
-      image: '//image.noelshack.com/fichiers/2016/47/1480286066-prowler.png',
-      title: 'Le Prowler, la relève du Galaxie',
-      text: 'Get in the gal ! Get in the fucking ga... My mistake. Get in the Prowler !',
-      id: 4
     });
 
 
@@ -66,48 +60,56 @@ angular.module('communauteUfrApp')
       theme:'World of Warships',
       title:'King of the Sea V',
       img: 'ships-fleet.jpg',
+      date: '20180110',
       file: '2018-01-10-one-step-from-heaven.json',
       route: 'one-step-from-heaven'
     },{
       theme:'World of Warships',
       title:'Le retour du Twitch',
       img: 'wows3.jpg',
+      date: '20180102',
       file: '2018-01-02-maman-je-passe-a-la-tele.json',
       route: 'maman-je-passe-a-la-tele'
     },{
       theme:'World of Warships',
       title:'Fin de la 1ère saison des batailles de clan',
       img: 'wows2.jpg',
+      date: '20180101',
       file: '2018-01-01-sortez-la-cb.json',
       route: 'sortez-la-cb'
     },{
       theme:'Découverte',
       title:'Bomber Crew',
       img: 'bomber-crew.jpg',
+      date: '20171217',
       file: '2017-12-17-bomber-crew.json',
       route: 'bomber-crew'
     },{
       theme:'World of Warships',
       title:'LotS saison II : UFR vainqueure',
       img: 'wows-carrier.jpg',
+      date: '20171120',
       file: '2017-11-20-ufr-wins-lots-2.json',
       route: 'ufr-wins-lots-2'
     },{
       theme:'World of Warships',
       title:'Match LotS',
       img: 'wows.jpg',
+      date: '20171001',
       file: '2017-10-01-lots-2-m3.json',
       route: 'lots-2-m3'
     },{
       theme:'World of Warships',
       title:'Tournoi King of the Sea II',
       img: 'king-of-the-sea-2.png',
+      date: '20170227',
       file: '2017-02-27-tournoi-king-of-the-sea-2.json',
       route: 'tournoi-king-of-the-sea-2'
     },{
       theme:'Grand Theft Auto V',
       title:'Motos, boulots, bobos',
       img: 'gtav.jpeg',
+      date: '20170225',
       file: '2017-02-25-1-un-nouveau-fighter-le-hurricane.json',
       route: 'update-des-constructions'
     }];

@@ -94,8 +94,8 @@ body {
 /************************************************************************/
 /*                               Carousel                               */
 /*                                                                      */
-/*On impose une taille fixe aux images                                  */
-/*On tachera d'en fournir avec un ratio 16:9 de dimension 1000*562px    */
+/*We set a fixed size for images                                        */
+/*We'll try to supply them with a 16:9 ratio and 1000*562px             */
 /************************************************************************/
 .ufr-carousel{
   box-shadow: 0px 5px 25px 1px rgba(0, 0, 0, 0.7);
@@ -103,7 +103,7 @@ body {
 .carousel-title, .carousel-subtitle{
   display: block;
 }
-/*Petit fond dégradé pour faire resortir les textes par dessus les images*/
+/*Small gradient background to make texts more visible over images*/
 .ufr-carousel span{
   background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
 }
@@ -169,31 +169,36 @@ body {
 /*                                                                      */
 /************************************************************************/
 @media (min-width: 992px) {
-  .container-news span.news-title{
+  .container-news span.title {
     font-size: 25px;
   }
-  .container-news span.news-game{
+  .container-news span.date {
+    font-size: 15px;
+  }
+  .container-news span.game {
     font-size: 20px;
   }
 }
 @media (max-width: 991px) {
-  .container-news span.news-title{
+  .container-news span.title{
     font-size: 20px;
   }
-  .container-news span.news-game{
+  .container-news span.date {
+    font-size: 12px;
+  }
+  .container-news span.game{
     font-size: 15px;
   }
 }
 .container-news{
-  /*on annule le padding instauré par le container-fluid :/ */
+  /*Cancel padding due to container-fluid :/ */
   padding-left: 0px;
-  padding-right: 0px;/*REGLER cette histoire d'alignement*/
+  padding-right: 0px;
 
   border-top: solid black 5px;
   border-left: solid black 5px;
 }
 
-/*Style pour un block*/
 .block-news{
   height: 150px;
   padding: 0px;
@@ -201,7 +206,6 @@ body {
   font-weight: bold;
   border-right: solid black 5px;
   border-bottom: solid black 5px;
-  /*text-shadow: 2px 2px white;*/
   text-align: center;
   background: no-repeat center center;
   background-size:cover;
@@ -209,7 +213,7 @@ body {
 }
 
 .sub-block-news {
-  padding-top: 17px;
+  padding-top: 30px;
   height: 150px;
   transition: background-color 1s;
 }
@@ -220,7 +224,7 @@ body {
   transition: background-color 0.5s;
 }
 
-.sub-block-news:hover span{
+.sub-block-news:hover .news-title-date, .sub-block-news:hover span{
   background: radial-gradient(rgba(50,50,50,0), rgba(50,50,50,0));
 }
 
@@ -228,8 +232,11 @@ body {
   cursor: pointer;
 }
 
-.block-news span{
-  background: radial-gradient(rgba(50,50,50,1), rgba(50,50,50,0));
+.block-news .news-title-date {
+  background: radial-gradient(rgba(50,50,50,1), rgba(0,0,0,0));
+}
+
+.block-news span {
   display: block;
 }
 
@@ -258,7 +265,7 @@ body {
 .container-jeux{
   margin: -10px -10px -10px -10px;
 
-  /*On annule le padding provoqué par la classe container-fluid*/
+  /*Cancel padding due to container-fluid :/ */
   padding-left: 0px;
   padding-right: 0px;
 
@@ -292,9 +299,9 @@ body {
 .block-branche-shadow-and-text {
   height: 250px;
   padding-top: 70px;
-  vertical-align:middle;
-  line-height:1.2; /* on rétablit le line-height */
-  text-align:center; /* ... et l'alignement du texte */
+  vertical-align: middle;
+  line-height: 1.2;
+  text-align: center;
   transition: background-color 1s;
 }
 
