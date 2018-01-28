@@ -1,6 +1,39 @@
 'use strict';
 
-angular.module('communauteUfrApp').directive('verticalTimeline', function(){
+angular.module('communauteUfrApp').directive('verticalTimeline', function($uibModal){
+
+  var getClosestOccurenceBeforePosition = function (string, char, position) {
+    var n = 0;
+    var stringEndIndex = string.length - 1;
+    var index = stringEndIndex;
+
+    if (0 < position && position < string.length) {
+      while(n < position || index === stringEndIndex) {
+        if (string[n] === char) {
+          index = n;
+        }
+        n++;
+      }
+    }
+    return index;
+  };
+
+  var getSplitedText = function (text, maxCharNbPerLine) {
+    var textLines = [];
+
+    var cursorPosition = 0;
+    while (text.length > maxCharNbPerLine) {
+      var cutPosition = getClosestOccurenceBeforePosition(text, ' ', maxCharNbPerLine);
+
+      textLines.push(text.substring(cursorPosition, cutPosition));
+
+      text = text.substring(cutPosition + 1);
+      cursorPosition = cutPosition + 1;
+    }
+    textLines.push(text);
+
+    return textLines;
+  };
 
   var drawVerticalLine = function (context, lineOriginX, lineOriginY, width, weight, fillColor) {
     context.fillStyle = fillColor;
@@ -12,13 +45,15 @@ angular.module('communauteUfrApp').directive('verticalTimeline', function(){
     context.fill();
   };
 
-  var drawEventPoint = function (context, x, y, radius, width, color, font, event) {
+  var drawEventPoint = function (context, canvas, x, y, radius, width, color, font, textLineWidth, event) {
+    //Draw circle
     context.beginPath();
     context.strokeStyle = color;
     context.lineWidth = width;
     context.arc(x, y, radius, 0, Math.PI * 2, true);
     context.stroke();
 
+    //Draw central point
     context.beginPath();
     context.fillStyle = color;
 
@@ -30,9 +65,46 @@ angular.module('communauteUfrApp').directive('verticalTimeline', function(){
     context.arc(x, y, radius, 0, Math.PI * 2, true);
     context.fill();
 
+    //Print date and label
     context.font = font;
-    context.fillText(moment(event.date, 'YYYYMMDD').format('Do MMMM'), x + 15, y - 2);
-    context.fillText(event.label, x + 15, y + 14);
+    var dateX = x + radius + 15;
+    var dateY = y - 2;
+    var textX = dateX;
+    var textY = y + 14;
+
+    context.fillText(moment(event.date, 'YYYYMMDD').format('Do MMMM'), dateX, dateY);
+
+    var labelLines = getSplitedText(event.label, textLineWidth);
+    for (var i = 0; i < labelLines.length; i++) {
+      context.fillText(labelLines[i], textX, textY + i * 15);
+    }
+
+    //Add event when clicking on circle
+    canvas.addEventListener('click', function(clickEvent) {
+      //Get click position regarding the canvas
+
+      var posX = clickEvent.pageX - canvas.offsetLeft - canvas.offsetParent.offsetLeft;
+      var posY = clickEvent.pageY - canvas.offsetTop - canvas.offsetParent.offsetTop;
+
+      //Check if click is on the event circle
+      var realRadius = (radius + width) * 3;
+      if (posX > x - realRadius && posX < x + realRadius && posY > y - realRadius && posY < y + realRadius) {
+        $uibModal.open({
+          animation: true,
+          ariaLabelledBy: 'modal-title-bottom',
+          ariaDescribedBy: 'modal-body-bottom',
+          templateUrl: 'views/modal-content.html',
+          // component: 'modalComponent',
+          size: 'sm',
+          controller: function($scope) {
+            $scope.title = event.label;
+            $scope.date = moment(event.date, 'YYYYMMDD').format('Do MMMM YYYY');
+            $scope.text = event.text;
+            $scope.img = event.img;
+          }
+        });
+      }
+    }, false)
   };
 
   var drawDashYear = function (context, startX, startY, width, height, space, number, color, font, year) {
@@ -68,6 +140,7 @@ angular.module('communauteUfrApp').directive('verticalTimeline', function(){
         var circleWidth = 4;
         var pointColor = 'rgb(50, 100, 150)';
         var pointFont = '15px Arial';
+        var labelWidth = 34;
 
         //Lines
         var lineWidth = 60;
@@ -93,7 +166,7 @@ angular.module('communauteUfrApp').directive('verticalTimeline', function(){
 
         //Draw the Timeline
         for (var i = 0; i < nbOfEvents; i++) {
-          drawEventPoint(ctx, originX, originY, pointRadius, circleWidth, pointColor, pointFont, $scope.events[i]);
+          drawEventPoint(ctx, canvas, originX, originY, pointRadius, circleWidth, pointColor, pointFont, labelWidth, $scope.events[i]);
 
           if (i + 1 === nbOfEvents || moment($scope.events[i].date, 'YYYYMMDD').format('YYYY') !== moment($scope.events[i+1].date, 'YYYYMMDD').format('YYYY')) {
             drawDashYear(ctx, originX - yearOffsetX, originY + yearOffsetY, dashWidth, dashHeight, spaceBetweenDash, nbOfDash, yearColor, yearFont, moment($scope.events[i].date, 'YYYYMMDD').format('YYYY'));
@@ -104,7 +177,6 @@ angular.module('communauteUfrApp').directive('verticalTimeline', function(){
             originY += lineWidth + pointRadius * 2;
           }
         }
-
       } else {
         console.log('Your browser does not support canvas... Update or change it !');
       }

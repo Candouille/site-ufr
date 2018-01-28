@@ -63,3 +63,20 @@ canvas#vertical-timeline {
   margin-left: auto;
   margin-right: auto;
 }
+
+.timeline-modal {
+  text-align: center;
+  margin: 10px;
+}
+
+.timeline-modal span {
+  display: block;
+}
+
+.timeline-modal .title {
+  text-decoration: underline;
+}
+
+.timeline-modal p {
+  text-align: justify;
+}
