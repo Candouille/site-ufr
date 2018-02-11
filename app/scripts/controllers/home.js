@@ -71,6 +71,13 @@ angular.module('communauteUfrApp')
       file: '2018-01-02-maman-je-passe-a-la-tele.json',
       route: 'maman-je-passe-a-la-tele'
     },{
+      theme:'Découverte',
+      title:'Bridge Consctructor Portal',
+      img: 'bridge-constructor-portal.jpg',
+      date: '20180101',
+      file: '2018-01-01-bridge-constructor-portal.json',
+      route: 'bridge-constructor-portal'
+    },{
       theme:'World of Warships',
       title:'Fin de la 1ère saison des batailles de clan',
       img: 'wows2.jpg',
