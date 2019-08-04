@@ -24,28 +24,34 @@ angular.module('communauteUfrApp')
     };
 
     slides.push({
+      image: 'images/carousel/minecraft-summer-2019.jpg',
+      title: 'Minecraft été 2019',
+      text: 'Quand la nostalgie s\'empare de nous, on retourne casser des cubes.',
+      id: 0
+    });
+    slides.push({
       image: 'images/carousel/kots5.jpg',
       title: 'L\'UFR repart à l\'assaut du titre',
       text: 'En présentant deux équipes !',
-      id: 0
+      id: 1
     });
     slides.push({
       image: 'images/carousel/sc-3-0.jpg',
       title: 'La 3.0 est là !',
       text: 'Les FPS un peu moins... Mais la 3.0 est là quand même :D',
-      id: 1
+      id: 2
     });
     slides.push({
       image: 'images/carousel/overwatch.png',
       title: 'On lvl up sur Overwatch !',
       text: 'Si le matchmaking le veut bien...',
-      id: 2
+      id: 3
     });
     slides.push({
       image: '//image.noelshack.com/fichiers/2016/47/1480287464-gtav.png',
       title: 'L\'UFR est sur GTA !',
       text: 'Le respect peut aller se faire voir. La décence aussi...',
-      id: 3
+      id: 4
     });
 
 
